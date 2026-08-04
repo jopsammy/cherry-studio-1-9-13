@@ -80,7 +80,7 @@ jobs:
 
       - name: Process issue with Claude
         if: steps.check_time.outputs.should_delay == 'false'
-        uses: anthropics/claude-code-action@v1
+        uses: anthropics/claude-code-action@v1.0.183
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           allowed_non_write_users: "*"
@@ -170,7 +170,7 @@ jobs:
         run: pnpm install
 
       - name: Process pending issues with Claude
-        uses: anthropics/claude-code-action@v1
+        uses: anthropics/claude-code-action@v1.0.183
         with:
           anthropic_api_key: ${{ secrets.CLAUDE_TRANSLATOR_APIKEY }}
           allowed_non_write_users: "*"
